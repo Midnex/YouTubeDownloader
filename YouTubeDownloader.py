@@ -79,10 +79,10 @@ def download_file(file_url=None, file_format="audio"):
 
 def set_preferences():
     print(f"\nBy default YouTube Downloader will always download the best quality option")
-    preference = input("Would you like to manually select the quality option?\n\n\tYes\n\tNo\n")
-    if preference in ["Yes", "yes", "y", "Y"]:
+    preference = input("Would you like to manually select the quality option?\n\n\tYes\n\tNo\n").lower()
+    if preference in ["yes", "y"]:
         return "Manual"
-    elif preference in ["No", "no", "n", "N"]:
+    elif preference in ["no", "n"]:
         return "Default"
     else:
         invalidInputException()
